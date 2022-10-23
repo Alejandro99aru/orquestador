@@ -1,0 +1,350 @@
+{
+    "description": [
+        {
+            "excerpt": "*Stable Diffusion was made possible thanks to a collaboration with [Stability AI](https://stability.ai/) and [Runway](https://runwayml.com/) and builds upon our previous work:* \n![txt2img-stable2](assets/stable-samples/txt2img/merged-0006.png)\n[Stable Diffusion](#stable-diffusion-v1) is a latent text-to-image diffusion\nmodel.\nThanks to a generous compute donation from [Stability AI](https://stability.ai/) and support from [LAION](https://laion.ai/), we were able to train a Latent Diffusion Model on 512x512 images from a subset of the [LAION-5B](https://laion.ai/blog/laion-5b/) database. \nSimilar to Google's [Imagen](https://arxiv.org/abs/2205.11487), \nthis model uses a frozen CLIP ViT-L/14 text encoder to condition the model on text prompts.\nWith its 860M UNet and 123M text encoder, the model is relatively lightweight and runs on a GPU with at least 10GB VRAM.\nSee [this section](#stable-diffusion-v1) below and the [model card](https://huggingface.co/CompVis/stable-diffusion). \n",
+            "confidence": [
+                [
+                    0.9162767706989855,
+                    0.9914195335603109
+                ]
+            ],
+            "technique": "Supervised classification",
+            "originalHeader": "Stable Diffusion"
+        },
+        {
+            "excerpt": "Stable Diffusion v1 refers to a specific configuration of the model\narchitecture that uses a downsampling-factor 8 autoencoder with an 860M UNet\nand CLIP ViT-L/14 text encoder for the diffusion model. The model was pretrained on 256x256 images and \nthen finetuned on 512x512 images. \n*Note: Stable Diffusion v1 is a general text-to-image diffusion model and therefore mirrors biases and (mis-)conceptions that are present\nin its training data. \nDetails on the training procedure and data, as well as the intended use of the model can be found in the corresponding [model card](Stable_Diffusion_v1_Model_Card.md).* \nThe weights are available via [the CompVis organization at Hugging Face](https://huggingface.co/CompVis) under [a license which contains specific use-based restrictions to prevent misuse and harm as informed by the model card, but otherwise remains permissive](LICENSE). While commercial use is permitted under the terms of the license, **we do not recommend using the provided weights for services or products without additional safety mechanisms and considerations**, since there are [known limitations and biases](Stable_Diffusion_v1_Model_Card.md#limitations-and-bias) of the weights, and research on safe and ethical deployment of general text-to-image models is an ongoing effort. **The weights are research artifacts and should be treated as such.** \n[The CreativeML OpenRAIL M license](LICENSE) is an [Open RAIL M license](https://www.licenses.ai/blog/2022/8/18/naming-convention-of-responsible-ai-licenses), adapted from the work that [BigScience](https://bigscience.huggingface.co/) and [the RAIL Initiative](https://www.licenses.ai/) are jointly carrying in the area of responsible AI licensing. See also [the article about the BLOOM Open RAIL license](https://bigscience.huggingface.co/blog/the-bigscience-rail-license) on which our license is based.\n \n",
+            "confidence": [
+                [
+                    0.9577213291835878,
+                    0.9820592416431664,
+                    0.9832721294742743,
+                    0.999309356821699
+                ]
+            ],
+            "technique": "Supervised classification",
+            "originalHeader": "Stable Diffusion v1",
+            "parentHeader": [
+                "Stable Diffusion"
+            ]
+        },
+        {
+            "excerpt": "We currently provide the following checkpoints: \n- `sd-v1-1.ckpt`: 237k steps at resolution `256x256` on [laion2B-en](https://huggingface.co/datasets/laion/laion2B-en).\n  194k steps at resolution `512x512` on [laion-high-resolution](https://huggingface.co/datasets/laion/laion-high-resolution) (170M examples from LAION-5B with resolution `>= 1024x1024`).\n- `sd-v1-2.ckpt`: Resumed from `sd-v1-1.ckpt`.\n  515k steps at resolution `512x512` on [laion-aesthetics v2 5+](https://laion.ai/blog/laion-aesthetics/) (a subset of laion2B-en with estimated aesthetics score `> 5.0`, and additionally\nfiltered to images with an original size `>= 512x512`, and an estimated watermark probability `< 0.5`. The watermark estimate is from the [LAION-5B](https://laion.ai/blog/laion-5b/) metadata, the aesthetics score is estimated using the [LAION-Aesthetics Predictor V2](https://github.com/christophschuhmann/improved-aesthetic-predictor)).\n- `sd-v1-3.ckpt`: Resumed from `sd-v1-2.ckpt`. 195k steps at resolution `512x512` on \"laion-aesthetics v2 5+\" and 10\\% dropping of the text-conditioning to improve [classifier-free guidance sampling](https://arxiv.org/abs/2207.12598).\n- `sd-v1-4.ckpt`: Resumed from `sd-v1-2.ckpt`. 225k steps at resolution `512x512` on \"laion-aesthetics v2 5+\" and 10\\% dropping of the text-conditioning to improve [classifier-free guidance sampling](https://arxiv.org/abs/2207.12598). \nEvaluations with different classifier-free guidance scales (1.5, 2.0, 3.0, 4.0,\n5.0, 6.0, 7.0, 8.0) and 50 PLMS sampling\nsteps show the relative improvements of the checkpoints:\n![sd evaluation results](assets/v1-variants-scores.jpg) \n",
+            "confidence": [
+                [
+                    0.8384849029603083,
+                    0.9535256142112568,
+                    0.9648178937287899
+                ]
+            ],
+            "technique": "Supervised classification",
+            "originalHeader": "Weights",
+            "parentHeader": [
+                "Stable Diffusion",
+                "Stable Diffusion v1"
+            ]
+        },
+        {
+            "excerpt": "Stable Diffusion is a latent diffusion model conditioned on the (non-pooled) text embeddings of a CLIP ViT-L/14 text encoder.\nWe provide a [reference script for sampling](#reference-sampling-script), but\nthere also exists a [diffusers integration](#diffusers-integration), which we\nexpect to see more active community development.\n \n",
+            "confidence": [
+                [
+                    0.9891586328112103
+                ]
+            ],
+            "technique": "Supervised classification",
+            "originalHeader": "Text-to-Image with Stable Diffusion",
+            "parentHeader": [
+                "Stable Diffusion",
+                "Stable Diffusion v1"
+            ]
+        },
+        {
+            "excerpt": "By using a diffusion-denoising mechanism as first proposed by [SDEdit](https://arxiv.org/abs/2108.01073), the model can be used for different \ntasks such as text-guided image-to-image translation and upscaling. Similar to the txt2img sampling script, \nwe provide a script to perform image modification with Stable Diffusion.   \nThe following describes an example where a rough sketch made in [Pinta](https://www.pinta-project.com/) is converted into a detailed artwork.\n```\npython scripts/img2img.py --prompt \"A fantasy landscape, trending on artstation\" --init-img <path-to-img.jpg> --strength 0.8\n```\nHere, strength is a value between 0.0 and 1.0, that controls the amount of noise that is added to the input image. \nValues that approach 1.0 allow for lots of variations but will also produce images that are not semantically consistent with the input. See the following example. \nThis procedure can, for example, also be used to upscale samples from the base model. \n",
+            "confidence": [
+                [
+                    0.9195515849492384,
+                    0.967638043185515,
+                    0.8423201236106764
+                ]
+            ],
+            "technique": "Supervised classification",
+            "originalHeader": "Image Modification with Stable Diffusion",
+            "parentHeader": [
+                "Stable Diffusion",
+                "Stable Diffusion v1"
+            ]
+        },
+        {
+            "excerpt": "- Our codebase for the diffusion models builds heavily on [OpenAI's ADM codebase](https://github.com/openai/guided-diffusion)\nand [https://github.com/lucidrains/denoising-diffusion-pytorch](https://github.com/lucidrains/denoising-diffusion-pytorch). \nThanks for open-sourcing! \n- The implementation of the transformer encoder is from [x-transformers](https://github.com/lucidrains/x-transformers) by [lucidrains](https://github.com/lucidrains?tab=repositories).  \n",
+            "confidence": [
+                [
+                    0.9711199247425043,
+                    0.9711369313031707
+                ]
+            ],
+            "technique": "Supervised classification",
+            "originalHeader": "Comments",
+            "parentHeader": [
+                "Stable Diffusion"
+            ]
+        },
+        {
+            "excerpt": "A latent text-to-image diffusion model",
+            "confidence": [
+                1.0
+            ],
+            "technique": "GitHub API"
+        }
+    ],
+    "citation": [
+        {
+            "originalHeader": "Reference Sampling Script",
+            "excerpt": "We provide a reference sampling script, which incorporates\n\n- a [Safety Checker Module](https://github.com/CompVis/stable-diffusion/pull/36),\n  to reduce the probability of explicit outputs,\n- an [invisible watermarking](https://github.com/ShieldMnt/invisible-watermark)\n  of the outputs, to help viewers [identify the images as machine-generated](scripts/tests/test_watermark.py).\n\nAfter [obtaining the `stable-diffusion-v1-*-original` weights](#weights), link them\n```\nmkdir -p models/ldm/stable-diffusion-v1/\nln -s <path/to/model.ckpt> models/ldm/stable-diffusion-v1/model.ckpt \n```\nand sample with\n```\npython scripts/txt2img.py --prompt \"a photograph of an astronaut riding a horse\" --plms \n```\n\nBy default, this uses a guidance scale of `--scale 7.5`, [Katherine Crowson's implementation](https://github.com/CompVis/latent-diffusion/pull/51) of the [PLMS](https://arxiv.org/abs/2202.09778) sampler, \nand renders images of size 512x512 (which it was trained on) in 50 steps. All supported arguments are listed below (type `python scripts/txt2img.py --help`).\n\n\n```commandline\nusage: txt2img.py [-h] [--prompt [PROMPT]] [--outdir [OUTDIR]] [--skip_grid] [--skip_save] [--ddim_steps DDIM_STEPS] [--plms] [--laion400m] [--fixed_code] [--ddim_eta DDIM_ETA]\n                  [--n_iter N_ITER] [--H H] [--W W] [--C C] [--f F] [--n_samples N_SAMPLES] [--n_rows N_ROWS] [--scale SCALE] [--from-file FROM_FILE] [--config CONFIG] [--ckpt CKPT]\n                  [--seed SEED] [--precision {full,autocast}]\n\noptional arguments:\n  -h, --help            show this help message and exit\n  --prompt [PROMPT]     the prompt to render\n  --outdir [OUTDIR]     dir to write results to\n  --skip_grid           do not save a grid, only individual samples. Helpful when evaluating lots of samples\n  --skip_save           do not save individual samples. For speed measurements.\n  --ddim_steps DDIM_STEPS\n                        number of ddim sampling steps\n  --plms                use plms sampling\n  --laion400m           uses the LAION400M model\n  --fixed_code          if enabled, uses the same starting code across samples\n  --ddim_eta DDIM_ETA   ddim eta (eta=0.0 corresponds to deterministic sampling\n  --n_iter N_ITER       sample this often\n  --H H                 image height, in pixel space\n  --W W                 image width, in pixel space\n  --C C                 latent channels\n  --f F                 downsampling factor\n  --n_samples N_SAMPLES\n                        how many samples to produce for each given prompt. A.k.a. batch size\n  --n_rows N_ROWS       rows in the grid (default: n_samples)\n  --scale SCALE         unconditional guidance scale: eps = eps(x, empty) + scale * (eps(x, cond) - eps(x, empty))\n  --from-file FROM_FILE\n                        if specified, load prompts from this file\n  --config CONFIG       path to config which constructs model\n  --ckpt CKPT           path to checkpoint of model\n  --seed SEED           the seed (for reproducible sampling)\n  --precision {full,autocast}\n                        evaluate at this precision\n```\nNote: The inference config for all v1 versions is designed to be used with EMA-only checkpoints. \nFor this reason `use_ema=False` is set in the configuration, otherwise the code will try to switch from\nnon-EMA to EMA weights. If you want to examine the effect of EMA vs no EMA, we provide \"full\" checkpoints\nwhich contain both types of weights. For these, `use_ema=False` will load and use the non-EMA weights.\n\n",
+            "parentHeader": [
+                "Stable Diffusion",
+                "Stable Diffusion v1",
+                "Text-to-Image with Stable Diffusion"
+            ],
+            "confidence": [
+                1.0
+            ],
+            "technique": "Header extraction"
+        },
+        {
+            "excerpt": "@misc{rombach2021highresolution,\n      title={High-Resolution Image Synthesis with Latent Diffusion Models}, \n      author={Robin Rombach and Andreas Blattmann and Dominik Lorenz and Patrick Esser and Bj\u00f6rn Ommer},\n      year={2021},\n      eprint={2112.10752},\n      archivePrefix={arXiv},\n      primaryClass={cs.CV}\n}",
+            "confidence": [
+                1.0
+            ],
+            "technique": "Regular expression"
+        }
+    ],
+    "longTitle": {
+        "excerpt": "Stable Diffusion",
+        "confidence": [
+            1.0
+        ],
+        "technique": "Regular expression"
+    },
+    "arxivLinks": {
+        "excerpt": [
+            "https://arxiv.org/abs/2112.10752",
+            "https://arxiv.org/abs/2205.11487",
+            "https://arxiv.org/abs/2207.12598",
+            "https://arxiv.org/abs/2207.12598",
+            "https://arxiv.org/abs/2202.09778",
+            "https://arxiv.org/abs/2108.01073"
+        ],
+        "confidence": [
+            1.0
+        ],
+        "technique": "Regular expression"
+    },
+    "image": [
+        {
+            "excerpt": "https://raw.githubusercontent.com/CompVis/stable-diffusion/master/assets/stable-samples/img2img/mountains-2.png",
+            "confidence": [
+                1.0
+            ],
+            "technique": "Regular expression"
+        },
+        {
+            "excerpt": "https://raw.githubusercontent.com/CompVis/stable-diffusion/master/assets/stable-samples/img2img/mountains-3.png",
+            "confidence": [
+                1.0
+            ],
+            "technique": "Regular expression"
+        },
+        {
+            "excerpt": "https://raw.githubusercontent.com/CompVis/stable-diffusion/master/assets/stable-samples/img2img/sketch-mountains-input.jpg",
+            "confidence": [
+                1.0
+            ],
+            "technique": "Regular expression"
+        },
+        {
+            "excerpt": "https://raw.githubusercontent.com/CompVis/stable-diffusion/master/assets/stable-samples/txt2img/merged-0007.png",
+            "confidence": [
+                1.0
+            ],
+            "technique": "Regular expression"
+        },
+        {
+            "excerpt": "https://raw.githubusercontent.com/CompVis/stable-diffusion/master/assets/stable-samples/txt2img/merged-0005.png",
+            "confidence": [
+                1.0
+            ],
+            "technique": "Regular expression"
+        },
+        {
+            "excerpt": "https://raw.githubusercontent.com/CompVis/stable-diffusion/master/assets/v1-variants-scores.jpg",
+            "confidence": [
+                1.0
+            ],
+            "technique": "Regular expression"
+        },
+        {
+            "excerpt": "https://raw.githubusercontent.com/CompVis/stable-diffusion/master/assets/stable-samples/txt2img/merged-0006.png",
+            "confidence": [
+                1.0
+            ],
+            "technique": "Regular expression"
+        }
+    ],
+    "requirement": [
+        {
+            "originalHeader": "Requirements",
+            "excerpt": "A suitable [conda](https://conda.io/) environment named `ldm` can be created\nand activated with:\n\n```\nconda env create -f environment.yaml\nconda activate ldm\n```\n\nYou can also update an existing [latent diffusion](https://github.com/CompVis/latent-diffusion) environment by running\n\n```\nconda install pytorch torchvision -c pytorch\npip install transformers==4.19.2 diffusers invisible-watermark\npip install -e .\n``` \n\n",
+            "parentHeader": [
+                "Stable Diffusion"
+            ],
+            "confidence": [
+                1.0
+            ],
+            "technique": "Header extraction"
+        }
+    ],
+    "codeRepository": {
+        "excerpt": "https://github.com/CompVis/stable-diffusion",
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "owner": {
+        "excerpt": "CompVis",
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "ownerType": {
+        "excerpt": "Organization",
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "dateCreated": {
+        "excerpt": "2022-08-10T14:36:44Z",
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "dateModified": {
+        "excerpt": "2022-10-02T20:28:42Z",
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "license": {
+        "excerpt": {
+            "name": "Other",
+            "url": "https://raw.githubusercontent.com/CompVis/stable-diffusion/main/LICENSE"
+        },
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "name": {
+        "excerpt": "stable-diffusion",
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "fullName": {
+        "excerpt": "CompVis/stable-diffusion",
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "issueTracker": {
+        "excerpt": "https://api.github.com/repos/CompVis/stable-diffusion/issues",
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "forksUrl": {
+        "excerpt": "https://api.github.com/repos/CompVis/stable-diffusion/forks",
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "downloadUrl": {
+        "excerpt": "https://github.com/CompVis/stable-diffusion/releases",
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "stargazersCount": {
+        "excerpt": {
+            "count": 26731,
+            "date": "Sun, 02 Oct 2022 20:29:22 GMT"
+        },
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "forksCount": {
+        "excerpt": {
+            "count": 4232,
+            "date": "Sun, 02 Oct 2022 20:29:22 GMT"
+        },
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "languages": {
+        "excerpt": [
+            "Jupyter Notebook",
+            "Python",
+            "Shell"
+        ],
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "licenseText": {
+        "excerpt": "b'Copyright (c) 2022 Robin Rombach and Patrick Esser and contributors\\n\\nCreativeML Open RAIL-M\\ndated August 22, 2022\\n\\nSection I: PREAMBLE\\n\\nMultimodal generative models are being widely adopted and used, and have the potential to transform the way artists, among other individuals, conceive and benefit from AI or ML technologies as a tool for content creation.\\n\\nNotwithstanding the current and potential benefits that these artifacts can bring to society at large, there are also concerns about potential misuses of them, either due to their technical limitations or ethical considerations.\\n\\nIn short, this license strives for both the open and responsible downstream use of the accompanying model. When it comes to the open character, we took inspiration from open source permissive licenses regarding the grant of IP rights. Referring to the downstream responsible use, we added use-based restrictions not permitting the use of the Model in very specific scenarios, in order for the licensor to be able to enforce the license in case potential misuses of the Model may occur. At the same time, we strive to promote open and responsible research on generative models for art and content generation.\\n\\nEven though downstream derivative versions of the model could be released under different licensing terms, the latter will always have to include - at minimum - the same use-based restrictions as the ones in the original license (this license). We believe in the intersection between open and responsible AI development; thus, this License aims to strike a balance between both in order to enable responsible open-science in the field of AI.\\n\\nThis License governs the use of the model (and its derivatives) and is informed by the model card associated with the model.\\n\\nNOW THEREFORE, You and Licensor agree as follows:\\n\\n1. Definitions\\n\\n- \"License\" means the terms and conditions for use, reproduction, and Distribution as defined in this document.\\n- \"Data\" means a collection of information and/or content extracted from the dataset used with the Model, including to train, pretrain, or otherwise evaluate the Model. The Data is not licensed under this License.\\n- \"Output\" means the results of operating a Model as embodied in informational content resulting therefrom.\\n- \"Model\" means any accompanying machine-learning based assemblies (including checkpoints), consisting of learnt weights, parameters (including optimizer states), corresponding to the model architecture as embodied in the Complementary Material, that have been trained or tuned, in whole or in part on the Data, using the Complementary Material.\\n- \"Derivatives of the Model\" means all modifications to the Model, works based on the Model, or any other model which is created or initialized by transfer of patterns of the weights, parameters, activations or output of the Model, to the other model, in order to cause the other model to perform similarly to the Model, including - but not limited to - distillation methods entailing the use of intermediate data representations or methods based on the generation of synthetic data by the Model for training the other model.\\n- \"Complementary Material\" means the accompanying source code and scripts used to define, run, load, benchmark or evaluate the Model, and used to prepare data for training or evaluation, if any. This includes any accompanying documentation, tutorials, examples, etc, if any.\\n- \"Distribution\" means any transmission, reproduction, publication or other sharing of the Model or Derivatives of the Model to a third party, including providing the Model as a hosted service made available by electronic or other remote means - e.g. API-based or web access.\\n- \"Licensor\" means the copyright owner or entity authorized by the copyright owner that is granting the License, including the persons or entities that may have rights in the Model and/or distributing the Model.\\n- \"You\" (or \"Your\") means an individual or Legal Entity exercising permissions granted by this License and/or making use of the Model for whichever purpose and in any field of use, including usage of the Model in an end-use application - e.g. chatbot, translator, image generator.\\n- \"Third Parties\" means individuals or legal entities that are not under common control with Licensor or You.\\n- \"Contribution\" means any work of authorship, including the original version of the Model and any modifications or additions to that Model or Derivatives of the Model thereof, that is intentionally submitted to Licensor for inclusion in the Model by the copyright owner or by an individual or Legal Entity authorized to submit on behalf of the copyright owner. For the purposes of this definition, \"submitted\" means any form of electronic, verbal, or written communication sent to the Licensor or its representatives, including but not limited to communication on electronic mailing lists, source code control systems, and issue tracking systems that are managed by, or on behalf of, the Licensor for the purpose of discussing and improving the Model, but excluding communication that is conspicuously marked or otherwise designated in writing by the copyright owner as \"Not a Contribution.\"\\n- \"Contributor\" means Licensor and any individual or Legal Entity on behalf of whom a Contribution has been received by Licensor and subsequently incorporated within the Model.\\n\\nSection II: INTELLECTUAL PROPERTY RIGHTS\\n\\nBoth copyright and patent grants apply to the Model, Derivatives of the Model and Complementary Material. The Model and Derivatives of the Model are subject to additional terms as described in Section III.\\n\\n2. Grant of Copyright License. Subject to the terms and conditions of this License, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable copyright license to reproduce, prepare, publicly display, publicly perform, sublicense, and distribute the Complementary Material, the Model, and Derivatives of the Model.\\n3. Grant of Patent License. Subject to the terms and conditions of this License and where and as applicable, each Contributor hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this paragraph) patent license to make, have made, use, offer to sell, sell, import, and otherwise transfer the Model and the Complementary Material, where such license applies only to those patent claims licensable by such Contributor that are necessarily infringed by their Contribution(s) alone or by combination of their Contribution(s) with the Model to which such Contribution(s) was submitted. If You institute patent litigation against any entity (including a cross-claim or counterclaim in a lawsuit) alleging that the Model and/or Complementary Material or a Contribution incorporated within the Model and/or Complementary Material constitutes direct or contributory patent infringement, then any patent licenses granted to You under this License for the Model and/or Work shall terminate as of the date such litigation is asserted or filed.\\n\\nSection III: CONDITIONS OF USAGE, DISTRIBUTION AND REDISTRIBUTION\\n\\n4. Distribution and Redistribution. You may host for Third Party remote access purposes (e.g. software-as-a-service), reproduce and distribute copies of the Model or Derivatives of the Model thereof in any medium, with or without modifications, provided that You meet the following conditions:\\nUse-based restrictions as referenced in paragraph 5 MUST be included as an enforceable provision by You in any type of legal agreement (e.g. a license) governing the use and/or distribution of the Model or Derivatives of the Model, and You shall give notice to subsequent users You Distribute to, that the Model or Derivatives of the Model are subject to paragraph 5. This provision does not apply to the use of Complementary Material.\\nYou must give any Third Party recipients of the Model or Derivatives of the Model a copy of this License;\\nYou must cause any modified files to carry prominent notices stating that You changed the files;\\nYou must retain all copyright, patent, trademark, and attribution notices excluding those notices that do not pertain to any part of the Model, Derivatives of the Model.\\nYou may add Your own copyright statement to Your modifications and may provide additional or different license terms and conditions - respecting paragraph 4.a. - for use, reproduction, or Distribution of Your modifications, or for any such Derivatives of the Model as a whole, provided Your use, reproduction, and Distribution of the Model otherwise complies with the conditions stated in this License.\\n5. Use-based restrictions. The restrictions set forth in Attachment A are considered Use-based restrictions. Therefore You cannot use the Model and the Derivatives of the Model for the specified restricted uses. You may use the Model subject to this License, including only for lawful purposes and in accordance with the License. Use may include creating any content with, finetuning, updating, running, training, evaluating and/or reparametrizing the Model. You shall require all of Your users who use the Model or a Derivative of the Model to comply with the terms of this paragraph (paragraph 5).\\n6. The Output You Generate. Except as set forth herein, Licensor claims no rights in the Output You generate using the Model. You are accountable for the Output you generate and its subsequent uses. No use of the output can contravene any provision as stated in the License.\\n\\nSection IV: OTHER PROVISIONS\\n\\n7. Updates and Runtime Restrictions. To the maximum extent permitted by law, Licensor reserves the right to restrict (remotely or otherwise) usage of the Model in violation of this License, update the Model through electronic means, or modify the Output of the Model based on updates. You shall undertake reasonable efforts to use the latest version of the Model.\\n8. Trademarks and related. Nothing in this License permits You to make use of Licensors\\xe2\\x80\\x99 trademarks, trade names, logos or to otherwise suggest endorsement or misrepresent the relationship between the parties; and any rights not expressly granted herein are reserved by the Licensors.\\n9. Disclaimer of Warranty. Unless required by applicable law or agreed to in writing, Licensor provides the Model and the Complementary Material (and each Contributor provides its Contributions) on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. You are solely responsible for determining the appropriateness of using or redistributing the Model, Derivatives of the Model, and the Complementary Material and assume any risks associated with Your exercise of permissions under this License.\\n10. Limitation of Liability. In no event and under no legal theory, whether in tort (including negligence), contract, or otherwise, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall any Contributor be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this License or out of the use or inability to use the Model and the Complementary Material (including but not limited to damages for loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses), even if such Contributor has been advised of the possibility of such damages.\\n11. Accepting Warranty or Additional Liability. While redistributing the Model, Derivatives of the Model and the Complementary Material thereof, You may choose to offer, and charge a fee for, acceptance of support, warranty, indemnity, or other liability obligations and/or rights consistent with this License. However, in accepting such obligations, You may act only on Your own behalf and on Your sole responsibility, not on behalf of any other Contributor, and only if You agree to indemnify, defend, and hold each Contributor harmless for any liability incurred by, or claims asserted against, such Contributor by reason of your accepting any such warranty or additional liability.\\n12. If any provision of this License is held to be invalid, illegal or unenforceable, the remaining provisions shall be unaffected thereby and remain valid as if such provision had not been set forth herein.\\n\\nEND OF TERMS AND CONDITIONS\\n\\n\\n\\n\\nAttachment A\\n\\nUse Restrictions\\n\\nYou agree not to use the Model or Derivatives of the Model:\\n- In any way that violates any applicable national, federal, state, local or international law or regulation;\\n- For the purpose of exploiting, harming or attempting to exploit or harm minors in any way;\\n- To generate or disseminate verifiably false information and/or content with the purpose of harming others;\\n- To generate or disseminate personal identifiable information that can be used to harm an individual;\\n- To defame, disparage or otherwise harass others;\\n- For fully automated decision making that adversely impacts an individual\\xe2\\x80\\x99s legal rights or otherwise creates or modifies a binding, enforceable obligation;\\n- For any use intended to or which has the effect of discriminating against or harming individuals or groups based on online or offline social behavior or known or predicted personal or personality characteristics;\\n- To exploit any of the vulnerabilities of a specific group of persons based on their age, social, physical or mental characteristics, in order to materially distort the behavior of a person pertaining to that group in a manner that causes or is likely to cause that person or another person physical or psychological harm;\\n- For any use intended to or which has the effect of discriminating against individuals or groups based on legally protected characteristics or categories;\\n- To provide medical advice and medical results interpretation;\\n- To generate or disseminate information for the purpose to be used for administration of justice, law enforcement, immigration or asylum processes, such as predicting an individual will commit fraud/crime commitment (e.g. by text profiling, drawing causal relationships between assertions made in documents, indiscriminate and arbitrarily-targeted use).\\n'",
+        "confidence": [
+            1.0
+        ],
+        "technique": "File Exploration"
+    },
+    "readmeUrl": {
+        "excerpt": "https://raw.githubusercontent.com/CompVis/stable-diffusion/main/README.md",
+        "confidence": [
+            1.0
+        ],
+        "technique": "GitHub API"
+    },
+    "hasExecutableNotebook": {
+        "excerpt": [
+            "https://raw.githubusercontent.com/CompVis/stable-diffusion/main/scripts/latent_imagenet_diffusion.ipynb"
+        ],
+        "confidence": [
+            1.0
+        ],
+        "technique": "File Exploration",
+        "format": "jupyter notebook"
+    },
+    "hasScriptFile": {
+        "excerpt": [
+            "https://raw.githubusercontent.com/CompVis/stable-diffusion/main/scripts/download_first_stages.sh",
+            "https://raw.githubusercontent.com/CompVis/stable-diffusion/main/scripts/download_models.sh"
+        ],
+        "confidence": [
+            1.0
+        ],
+        "technique": "File Exploration"
+    }
+}
