@@ -1,1 +1,0 @@
-{"file": {"path": "/Users/alejandrorodriguezuson/Downloads/CPVClassifier-main/preprocessing/atom2csvBS.py", "fileNameBase": "atom2csvBS", "extension": "py"}, "dependencies": [{"from_module": "bs4", "import": "BeautifulSoup", "type": "external"}, {"from_module": "pathlib", "import": "Path", "type": "external"}, {"import": "csv", "type": "external"}], "is_test": false}

@@ -1,0 +1,474 @@
+{
+    "head": {
+        "vars": [
+            "len",
+            "lenLabel"
+        ]
+    },
+    "results": {
+        "bindings": [
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q18491847"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "licencia BSD de 3 cláusulas"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q21503790"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "licencia BSD de 4 cláusulas"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q48271011"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Licencia BSD de dominio público"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q90408476"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "FreeBSD license"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q67538600"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "MIT No Attribution License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q207243"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Zlib License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q334661"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Licencia MIT"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q337279"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Academic Free License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q376841"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Licencia PHP"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q386474"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Licencia ISC"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q2033808"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "FreeBSD Documentation License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q2353141"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Boost Software License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q2495855"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "University of Illinois/NCSA Open Source License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q3153096"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Interbase Public License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q3780982"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Zope Public License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q4653881"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "AROS Public License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q5190781"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Cryptix General License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q5773924"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Historical Permission Notice and Disclaimer"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q6542418"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Libpng License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q6696468"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Lucent Public License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q6952418"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "NASA Open Source Agreement"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q11712557"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Initial Developer's Public License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q13785927"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Licencia Apache, versión 2.0"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q17817999"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Apache Software License, Version 1.1"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q18526198"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Expat license"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q18526202"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "X11 license"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q18563589"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "PostgreSQL License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q22682017"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Fair License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q25428413"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Mozilla Public License, version 2.0"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q26737735"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Mozilla Public License, version 1.1"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q26897902"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Apache Software License, Version 1.0"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q33042394"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "curl license"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q67145209"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Unicode, Inc. License Agreement"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q97463778"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Spencer License 86"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q98341313"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Kopimi"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q105235524"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Info-ZIP License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q105688056"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "libtiff License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q108110640"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Academic Free License, version 2.1"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q110619512"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Atmosphere Open Source License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q111694451"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Taisei Project License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q112074118"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Enonic License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q115053103"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Apache License v2.0 with LLVM Exceptions"
+                }
+            }
+        ]
+    }
+}

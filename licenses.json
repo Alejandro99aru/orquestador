@@ -259,17 +259,6 @@
             {
                 "len": {
                     "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q76444028"
-                },
-                "lenLabel": {
-                    "xml:lang": "en",
-                    "type": "literal",
-                    "value": "BabelPad"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q2277058"
                 },
                 "lenLabel": {
@@ -957,6 +946,17 @@
                     "xml:lang": "en",
                     "type": "literal",
                     "value": "Zuoyebang"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q90408476"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "FreeBSD license"
                 }
             },
             {
@@ -1897,6 +1897,17 @@
             {
                 "len": {
                     "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q115053236"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "LLVM Exceptions"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q41242"
                 },
                 "lenLabel": {
@@ -2002,17 +2013,6 @@
                     "xml:lang": "en",
                     "type": "literal",
                     "value": "JasPer License Version 2.0"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q90408476"
-                },
-                "lenLabel": {
-                    "xml:lang": "en",
-                    "type": "literal",
-                    "value": "FreeBSD license"
                 }
             },
             {
@@ -2579,6 +2579,17 @@
             {
                 "len": {
                     "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q776479"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Norton Commander"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q963254"
                 },
                 "lenLabel": {
@@ -2651,17 +2662,6 @@
                     "xml:lang": "es",
                     "type": "literal",
                     "value": "Deluxe Paint"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q2816466"
-                },
-                "lenLabel": {
-                    "xml:lang": "es",
-                    "type": "literal",
-                    "value": "3CX Phone System"
                 }
             },
             {
@@ -3740,6 +3740,17 @@
             {
                 "len": {
                     "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q2816466"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "3CX Phone System"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q3238076"
                 },
                 "lenLabel": {
@@ -4158,17 +4169,6 @@
             {
                 "len": {
                     "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q17048768"
-                },
-                "lenLabel": {
-                    "xml:lang": "es",
-                    "type": "literal",
-                    "value": "XSplit"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q10853145"
                 },
                 "lenLabel": {
@@ -4362,17 +4362,6 @@
                     "xml:lang": "es",
                     "type": "literal",
                     "value": "ClipConverter"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q110619794"
-                },
-                "lenLabel": {
-                    "xml:lang": "en",
-                    "type": "literal",
-                    "value": "Adobe Atmosphere"
                 }
             },
             {
@@ -4728,17 +4717,6 @@
             {
                 "len": {
                     "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q110620131"
-                },
-                "lenLabel": {
-                    "xml:lang": "en",
-                    "type": "literal",
-                    "value": "Adobe Atmosphere Player"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q110271769"
                 },
                 "lenLabel": {
@@ -4843,6 +4821,17 @@
                     "xml:lang": "en",
                     "type": "literal",
                     "value": "GitLab EE"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q17048768"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "XSplit"
                 }
             },
             {
@@ -5372,34 +5361,23 @@
             {
                 "len": {
                     "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q96418328"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "DigitaOS"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q107450379"
                 },
                 "lenLabel": {
                     "xml:lang": "es",
                     "type": "literal",
                     "value": "ClearMechanic"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q3153096"
-                },
-                "lenLabel": {
-                    "xml:lang": "en",
-                    "type": "literal",
-                    "value": "Interbase Public License"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q4653881"
-                },
-                "lenLabel": {
-                    "xml:lang": "en",
-                    "type": "literal",
-                    "value": "AROS Public License"
                 }
             },
             {
@@ -5444,6 +5422,17 @@
                     "xml:lang": "es",
                     "type": "literal",
                     "value": "Academic Free License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q110619794"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Adobe Atmosphere"
                 }
             },
             {
@@ -5515,17 +5504,6 @@
             {
                 "len": {
                     "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q2495855"
-                },
-                "lenLabel": {
-                    "xml:lang": "en",
-                    "type": "literal",
-                    "value": "University of Illinois/NCSA Open Source License"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q7669334"
                 },
                 "lenLabel": {
@@ -5576,17 +5554,6 @@
                     "xml:lang": "en",
                     "type": "literal",
                     "value": "Adaptive Public License"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q5190781"
-                },
-                "lenLabel": {
-                    "xml:lang": "en",
-                    "type": "literal",
-                    "value": "Cryptix General License"
                 }
             },
             {
@@ -5779,6 +5746,17 @@
             {
                 "len": {
                     "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q110620131"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Adobe Atmosphere Player"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q110620197"
                 },
                 "lenLabel": {
@@ -5856,17 +5834,6 @@
             {
                 "len": {
                     "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q2033808"
-                },
-                "lenLabel": {
-                    "xml:lang": "es",
-                    "type": "literal",
-                    "value": "FreeBSD Documentation License"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q110935536"
                 },
                 "lenLabel": {
@@ -5922,17 +5889,6 @@
             {
                 "len": {
                     "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q3780982"
-                },
-                "lenLabel": {
-                    "xml:lang": "es",
-                    "type": "literal",
-                    "value": "Zope Public License"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q112584460"
                 },
                 "lenLabel": {
@@ -5950,6 +5906,17 @@
                     "xml:lang": "en",
                     "type": "literal",
                     "value": "Upstream Compatibility License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q111371387"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Windows 12"
                 }
             },
             {
@@ -6043,6 +6010,39 @@
             {
                 "len": {
                     "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q114862524"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "ibisPaint"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q114936361"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Clip Studio Reader"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q114976951"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Pixel Launcher"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q28050835"
                 },
                 "lenLabel": {
@@ -6060,17 +6060,6 @@
                     "xml:lang": "es",
                     "type": "literal",
                     "value": "Design Science License"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q2353141"
-                },
-                "lenLabel": {
-                    "xml:lang": "es",
-                    "type": "literal",
-                    "value": "Boost Software License"
                 }
             },
             {
@@ -6307,6 +6296,17 @@
             {
                 "len": {
                     "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q115217392"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Nest"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q99635287"
                 },
                 "lenLabel": {
@@ -6340,6 +6340,72 @@
             {
                 "len": {
                     "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q98592850"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "liberado al dominio público por el propietario de los derechos de autor"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q24273512"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Public Domain Dedication and License v1.0"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q111853605"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Commons Clause"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q112752396"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "dotstokyo PD release"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q114756497"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Copyright-Only Dedication or Public Domain Certification"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q21659044"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Unlicense"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q63020872"
                 },
                 "lenLabel": {
@@ -6368,6 +6434,28 @@
                     "xml:lang": "es",
                     "type": "literal",
                     "value": "Python Software Foundation License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q3153096"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Interbase Public License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q4653881"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "AROS Public License"
                 }
             },
             {
@@ -6483,6 +6571,17 @@
             {
                 "len": {
                     "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q2495855"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "University of Illinois/NCSA Open Source License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q103979882"
                 },
                 "lenLabel": {
@@ -6511,17 +6610,6 @@
                     "xml:lang": "en",
                     "type": "literal",
                     "value": "GNU Library General Public License, version 2.0"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q98592850"
-                },
-                "lenLabel": {
-                    "xml:lang": "es",
-                    "type": "literal",
-                    "value": "liberado al dominio público por el propietario de los derechos de autor"
                 }
             },
             {
@@ -6604,6 +6692,17 @@
             {
                 "len": {
                     "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q5190781"
+                },
+                "lenLabel": {
+                    "xml:lang": "en",
+                    "type": "literal",
+                    "value": "Cryptix General License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q6952418"
                 },
                 "lenLabel": {
@@ -6648,12 +6747,12 @@
             {
                 "len": {
                     "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q24273512"
+                    "value": "http://www.wikidata.org/entity/Q108110640"
                 },
                 "lenLabel": {
                     "xml:lang": "en",
                     "type": "literal",
-                    "value": "Public Domain Dedication and License v1.0"
+                    "value": "Academic Free License, version 2.1"
                 }
             },
             {
@@ -6791,23 +6890,23 @@
             {
                 "len": {
                     "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q2033808"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "FreeBSD Documentation License"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
                     "value": "http://www.wikidata.org/entity/Q111694451"
                 },
                 "lenLabel": {
                     "xml:lang": "en",
                     "type": "literal",
                     "value": "Taisei Project License"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q111853605"
-                },
-                "lenLabel": {
-                    "xml:lang": "en",
-                    "type": "literal",
-                    "value": "Commons Clause"
                 }
             },
             {
@@ -6835,12 +6934,12 @@
             {
                 "len": {
                     "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q112752396"
+                    "value": "http://www.wikidata.org/entity/Q3780982"
                 },
                 "lenLabel": {
-                    "xml:lang": "en",
+                    "xml:lang": "es",
                     "type": "literal",
-                    "value": "dotstokyo PD release"
+                    "value": "Zope Public License"
                 }
             },
             {
@@ -6923,12 +7022,23 @@
             {
                 "len": {
                     "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q114756497"
+                    "value": "http://www.wikidata.org/entity/Q115053103"
                 },
                 "lenLabel": {
                     "xml:lang": "en",
                     "type": "literal",
-                    "value": "Copyright-Only Dedication or Public Domain Certification"
+                    "value": "Apache License v2.0 with LLVM Exceptions"
+                }
+            },
+            {
+                "len": {
+                    "type": "uri",
+                    "value": "http://www.wikidata.org/entity/Q2353141"
+                },
+                "lenLabel": {
+                    "xml:lang": "es",
+                    "type": "literal",
+                    "value": "Boost Software License"
                 }
             },
             {
@@ -6995,17 +7105,6 @@
                     "xml:lang": "en",
                     "type": "literal",
                     "value": "Initial Developer's Public License"
-                }
-            },
-            {
-                "len": {
-                    "type": "uri",
-                    "value": "http://www.wikidata.org/entity/Q21659044"
-                },
-                "lenLabel": {
-                    "xml:lang": "es",
-                    "type": "literal",
-                    "value": "Unlicense"
                 }
             },
             {
