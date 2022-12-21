@@ -2,8 +2,10 @@ import os
 import bibtexparser
 import json
 import requests
+from nameparser import HumanName
 
-urlrepo = "https://github.com/usc-isi-i2/kgtk"
+# urlrepo = "https://github.com/usc-isi-i2/kgtk"
+urlrepo = "https://github.com/KnowledgeCaptureAndDiscovery/somef"
 
 os.system("rm -r tmp/*")  # remove all files in tmp
 os.system("somef configure -a")  # configure somef
@@ -27,6 +29,33 @@ with open('licensesspdx.json') as f:
 
 citations = somef['citation']
 
+# Get all the users that have contributed to the repo releases
+nom_repo = somef['name']['excerpt']
+nom_owner = somef['owner']['excerpt']
+
+users = []
+resp = requests.get(
+    f'https://api.github.com/repos/{nom_owner}/{nom_repo}/contributors')
+for user in resp.json():
+    if user['type'] == 'User':
+        resp = requests.get(f'https://api.github.com/users/{user["login"]}')
+        if resp.status_code == 200:
+            userj = resp.json()
+            human = HumanName(userj['name'])
+            human.nickname = user['login']
+            if human not in users:
+                users.append(human)
+# users = []
+# for excerpt in somef['releases']['excerpt']:
+#     res = requests.get(f'https://api.github.com/users/{excerpt["authorName"]}')
+#     if res.status_code == 200:
+#         user = res.json()
+#         human = HumanName(user['name'])
+#         human.nickname = user['login']
+#     if human not in users:
+#         users.append(human)
+# print(len(users))
+
 articulos = []
 # Get all the articles cited in the repo
 for citation in citations:
@@ -35,13 +64,6 @@ for citation in citations:
     for bib in bib_database.entries:
         if bib["ENTRYTYPE"] == "article" and bib not in articulos:
             articulos.append(bib)
-
-# Get all the users that have contributed to the repo releases
-users = []
-for excerpt in somef['releases']['excerpt']:
-    if excerpt['authorName'] not in users:
-        users.append(excerpt['authorName'])
-print(len(users))
 
 # Get all the languages used in the repo
 lngs = []
