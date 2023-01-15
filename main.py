@@ -33,18 +33,45 @@ citations = somef['citation']
 nom_repo = somef['name']['excerpt']
 nom_owner = somef['owner']['excerpt']
 
-users = []
+users_contributors = []
+
+headers = {
+    'Accept': 'application/vnd.github.v3+json',
+    'X-GitHub-Api-Version': '2022-11-28',
+    'Authorization': f'Bearer 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'
+}
 resp = requests.get(
-    f'https://api.github.com/repos/{nom_owner}/{nom_repo}/contributors')
-for user in resp.json():
-    if user['type'] == 'User':
-        resp = requests.get(f'https://api.github.com/users/{user["login"]}')
-        if resp.status_code == 200:
-            userj = resp.json()
-            human = HumanName(userj['name'])
-            human.nickname = user['login']
-            if human not in users:
-                users.append(human)
+    f'https://api.github.com/repos/{nom_owner}/{nom_repo}/contributors', headers=headers)
+
+if resp.status_code == 200:
+    for user in resp.json():
+        if user['type'] == 'User':
+            users_contributors.append(user)
+
+graphql_query = """
+query($ids:[ID!]!) {
+	nodes(ids:$ids) {
+    	... on User {
+        		login
+     		name
+    	}
+	}
+}
+"""
+
+variables = {
+    "ids": [user['node_id'] for user in users_contributors]
+}
+
+request = requests.post('https://api.github.com/graphql',
+                        json={'query': graphql_query, 'variables': variables}, headers=headers)
+if request.status_code == 200:
+    rjson = request.json()
+    # añadir el nombre al json de los usuarios identificados por login en users_contributors
+    for user in rjson['data']['nodes']:
+        for u in users_contributors:
+            if user['login'] == u['login']:
+                u['name'] = user['name']
 # users = []
 # for excerpt in somef['releases']['excerpt']:
 #     res = requests.get(f'https://api.github.com/users/{excerpt["authorName"]}')
