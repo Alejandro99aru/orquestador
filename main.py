@@ -27,6 +27,8 @@ with open('langs.json') as f:
 with open('licensesspdx.json') as f:
     lin = json.load(f)
 
+result = {}
+
 citations = somef['citation']
 
 # Get all the users that have contributed to the repo releases
@@ -72,16 +74,7 @@ if request.status_code == 200:
         for u in users_contributors:
             if user['login'] == u['login']:
                 u['name'] = user['name']
-# users = []
-# for excerpt in somef['releases']['excerpt']:
-#     res = requests.get(f'https://api.github.com/users/{excerpt["authorName"]}')
-#     if res.status_code == 200:
-#         user = res.json()
-#         human = HumanName(user['name'])
-#         human.nickname = user['login']
-#     if human not in users:
-#         users.append(human)
-# print(len(users))
+
 
 articulos = []
 # Get all the articles cited in the repo
@@ -99,7 +92,6 @@ for lang in somef['languages']['excerpt']:
         if lang == l['lenLabel']['value']:
             lngs.append(l)
 
-print(len(articulos))
 
 # Get the license
 licenseurl = somef['license']['excerpt']["url"]
@@ -108,4 +100,10 @@ license = request.json()
 for l in lin["results"]["bindings"]:
     if license["spdx_id"] == l['spdx']['value']:
         license["wiki"] = l
-print(license)
+
+result["license"] = license
+result["languages"] = lngs
+result["articles"] = articulos
+result["users"] = users_contributors
+
+print(json.dumps(result, indent=4))
